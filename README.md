@@ -17,12 +17,12 @@ Run the following Maven build command to generate a deployable WAR:
 Deploy this war to Tomcat with the following context path:
 
   
-  /cv-api
+  	/cv-api
   
 
 #### API
 This API uses standard REST format.  Also, a POST via REST is required to get data from source systems, but is run automatically on a set schedule.  The following is a full explanation of all API endpoints:
 
   
-  [Coming soon.]
+  	[Coming soon.]
   
