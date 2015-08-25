@@ -1,4 +1,4 @@
-package org.pelka.resume.api.config;
+package org.pelka.resume.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,18 +7,19 @@ import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 
 /**
- * Defines application context and web application configuration.
- * Also contains main thread entry.
+ * Defines application context and web application configuration. Also contains
+ * main thread entry.
  * 
  * @author arnoldpelka
  *
  */
 @SpringBootApplication
-public class Application extends SpringBootServletInitializer{
+public class Application extends SpringBootServletInitializer {
 	@Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
-    }
+	protected SpringApplicationBuilder configure(
+			SpringApplicationBuilder application) {
+		return application.sources(Application.class);
+	}
 
 	/**
 	 * Main thread entry for setting application context, etc.
@@ -26,6 +27,7 @@ public class Application extends SpringBootServletInitializer{
 	 * @param args
 	 */
 	public static void main(String[] args) throws Exception {
+		@SuppressWarnings("unused")
 		ApplicationContext ctx = SpringApplication.run(Application.class, args);
 	}
 
