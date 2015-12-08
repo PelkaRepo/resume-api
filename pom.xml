@@ -11,7 +11,7 @@
 	<description>API connectivity layer for the resume building web UI. Grabs data from source systems REST services for UI consumption.</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<!-- java.version>1.8</java.version -->
 		<google.oauth.version>1.14.1-beta</google.oauth.version>
 		<final.name>cv-api</final.name>
 	</properties>
