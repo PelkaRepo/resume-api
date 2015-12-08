@@ -1,6 +1,9 @@
 # resume-api
 API connectivity layer for the resume building web UI.  Grabs data from source systems REST services for UI consumption.
 
+### Status
+[![Build Status](https://travis-ci.org/PelkaRepo/resume-api.svg)](https://travis-ci.org/PelkaRepo/resume-api)
+
 #### Architecture
 This website uses Java Springboot and builds using Apache Maven.  The API also requires a live and active connection to LinkedIn.
 
