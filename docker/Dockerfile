@@ -12,6 +12,10 @@ FROM ubuntu
 RUN \
   apt-get -qq update -y && \
   apt-get -qq install -y openjdk-7-jdk && \
+  apt-get -qq install -y git && \
+  apt-get -qq install -y maven && \
+  git clone https://github.com/PelkaRepo/resume-api.git && \
+  cd ./resume-api && \
   rm -rf /var/lib/apt/lists/*
 
 # Define working directory.
@@ -21,4 +25,4 @@ WORKDIR /data
 ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
 # Define default command.
-CMD ["bash"]
+CMD ["mvn spring-boot:run"]
