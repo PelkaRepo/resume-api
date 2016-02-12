@@ -1,24 +1,24 @@
 #
-# OpenJDK Java 8 JDK Dockerfile
+# OpenJDK Java 7 JDK Dockerfile
 #
 # https://github.com/dockerfile/java
-# https://github.com/dockerfile/java/tree/master/openjdk-8-jdk
+# https://github.com/dockerfile/java/tree/master/openjdk-7-jdk
 #
 
 # Pull base image.
-FROM dockerfile/ubuntu
+FROM ubuntu
 
 # Install Java.
 RUN \
-  apt-get update && \
-  apt-get install -y openjdk-8-jdk && \
+  apt-get -qq update -y && \
+  apt-get -qq install -y openjdk-7-jdk && \
   rm -rf /var/lib/apt/lists/*
 
 # Define working directory.
 WORKDIR /data
 
 # Define commonly used JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
 # Define default command.
 CMD ["bash"]
